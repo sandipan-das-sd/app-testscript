@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyanoda App Comprehensive Test Script</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #27ae60;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .section {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gyanoda App Comprehensive Test Script</h1>
+
+    <div class="section">
+        <h2>1. Launch and Onboarding</h2>
+
+        <h3>1.1 App Installation and Launch</h3>
+        <ol>
+            <li>Download the Gyanoda app from the app store</li>
+            <li>Install the app on the test device</li>
+            <li>Tap the app icon to launch</li>
+            <li>Verify that the app opens without crashing</li>
+        </ol>
+
+        <h3>1.2 Onboarding Screens</h3>
+        <ol>
+            <li>Check that onboarding screens appear</li>
+            <li>Swipe through all screens, verifying content and images</li>
+            <li>Ensure that the "Next" button works on each screen</li>
+            <li>On the last screen, tap the "Getting Started" button</li>
+            <li>Verify navigation to the login/signup screen</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>2. Sign Up Process</h2>
+
+        <h3>2.1 Sign Up Screen</h3>
+        <ol>
+            <li>Tap "Sign Up" on the login screen</li>
+            <li>Verify all required fields are present (name, email, password, phone, location)</li>
+            <li>Test each field with valid and invalid data:
+                <ul>
+                    <li>Name: Try empty, numbers, special characters</li>
+                    <li>Email: Try invalid formats, existing email</li>
+                    <li>Password: Test against password requirements</li>
+                    <li>Phone: Try invalid formats, existing numbers</li>
+                    <li>Location: Test auto-complete functionality</li>
+                </ul>
+            </li>
+            <li>Check that the "Sign Up" button is only active when all fields are valid</li>
+            <li>Verify the "Terms & Conditions" checkbox functionality</li>
+            <li>Test social sign-up options if available (Google, Facebook)</li>
+        </ol>
+
+        <h3>2.2 OTP Verification</h3>
+        <ol>
+            <li>After successful sign-up, verify redirection to OTP verification screen</li>
+            <li>Check that OTP is received via email/SMS</li>
+            <li>Enter correct OTP and verify account creation</li>
+            <li>Test incorrect OTP entry</li>
+            <li>Verify "Resend Code" functionality (should be available after 60 seconds)</li>
+            <li>Test OTP expiration (if applicable)</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>3. Login Process</h2>
+
+        <h3>3.1 Login Screen</h3>
+        <ol>
+            <li>Verify all elements are present (email field, password field, login button, forgot password link)</li>
+            <li>Test login with valid credentials</li>
+            <li>Test login with invalid email format</li>
+            <li>Test login with incorrect password</li>
+            <li>Verify error messages for invalid login attempts</li>
+            <li>Test "Remember Me" functionality if present</li>
+            <li>Verify "Forgot Password" link functionality</li>
+            <li>Test social login options if available</li>
+        </ol>
+
+        <h3>3.2 Forgot Password</h3>
+        <ol>
+            <li>Tap "Forgot Password" link</li>
+            <li>Enter email address and submit</li>
+            <li>Verify reset instructions are sent</li>
+            <li>Follow reset process and verify ability to set new password</li>
+            <li>Test login with new password</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>4. Home Screen</h2>
+
+        <h3>4.1 Home Screen Layout</h3>
+        <ol>
+            <li>Verify all components are present (header, search bar, course categories, featured courses)</li>
+            <li>Check that user information is correctly displayed</li>
+            <li>Verify that the search bar is functional</li>
+            <li>Test the course category horizontal scroll</li>
+            <li>Verify that featured courses are displayed correctly</li>
+        </ol>
+
+        <h3>4.2 Home Screen Functionality</h3>
+        <ol>
+            <li>Test pull-to-refresh functionality</li>
+            <li>Tap on a course category and verify filtering</li>
+            <li>Tap on a featured course and verify navigation to course details</li>
+            <li>Test navigation to other main sections (e.g., profile, notifications)</li>
+        </ol>
+    </div>
+
+    <!-- The rest of the sections continue in the same format -->
+
+    <div class="section">
+        <h2>14. Final Review</h2>
+
+        <h3>14.1 User Experience Assessment</h3>
+        <ol>
+            <li>Evaluate overall user experience and interface consistency</li>
+            <li>Note any confusing or unintuitive elements</li>
+        </ol>
+
+        <h3>14.2 Bug and Improvement Documentation</h3>
+        <ol>
+            <li>Compile a list of all observed bugs and issues</li>
+            <li>Note suggestions for improvements or additional features</li>
+            <li>Capture screenshots of any visual issues</li>
+        </ol>
+
+        <h3>14.3 Report Compilation</h3>
+        <ol>
+            <li>Organize all findings into a comprehensive report</li>
+            <li>Include steps to reproduce for any bugs found</li>
+            <li>Prioritize issues based on severity and impact on user experience</li>
+        </ol>
+    </div>
+</body>
+</html>
