@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -168,3 +168,330 @@
     </div>
 </body>
 </html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyanoda App Comprehensive Test Script</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f4f8;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            background-color: #e8f4fd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h3 {
+            color: #27ae60;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .section {
+            background-color: #fff;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .email-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .email-btn:hover {
+            background-color: #c0392b;
+        }
+        .result {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gyanoda App Comprehensive Test Script</h1>
+
+    <div class="section">
+        <h2>1. Launch and Onboarding</h2>
+
+        <h3>1.1 App Installation and Launch</h3>
+        <ol>
+            <li>Download the Gyanoda app from the app store</li>
+            <li>Install the app on the test device</li>
+            <li>Tap the app icon to launch</li>
+            <li>Verify that the app opens without crashing</li>
+        </ol>
+        <p class="result">Expected Result: App should launch successfully without any crashes or errors.</p>
+        <button class="email-btn" onclick="reportIssue('App Installation and Launch')">Report Issue</button>
+
+        <h3>1.2 Onboarding Screens</h3>
+        <ol>
+            <li>Check that onboarding screens appear</li>
+            <li>Swipe through all screens, verifying content and images</li>
+            <li>Ensure that the "Next" button works on each screen</li>
+            <li>On the last screen, tap the "Getting Started" button</li>
+            <li>Verify navigation to the login/signup screen</li>
+        </ol>
+        <p class="result">Expected Result: All onboarding screens should display correctly, and navigation should work as intended.</p>
+        <button class="email-btn" onclick="reportIssue('Onboarding Screens')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>2. Sign Up Process</h2>
+
+        <h3>2.1 Sign Up Screen</h3>
+        <ol>
+            <li>Tap "Sign Up" on the login screen</li>
+            <li>Verify all required fields are present (name, email, password, phone, location)</li>
+            <li>Test each field with valid and invalid data:
+                <ul>
+                    <li>Name: Try empty, numbers, special characters</li>
+                    <li>Email: Try invalid formats, existing email</li>
+                    <li>Password: Test against password requirements</li>
+                    <li>Phone: Try invalid formats, existing numbers</li>
+                    <li>Location: Test auto-complete functionality</li>
+                </ul>
+            </li>
+            <li>Check that the "Sign Up" button is only active when all fields are valid</li>
+            <li>Verify the "Terms & Conditions" checkbox functionality</li>
+            <li>Test social sign-up options if available (Google, Facebook)</li>
+        </ol>
+        <p class="result">Expected Result: Sign-up form should validate all inputs correctly and prevent submission of invalid data.</p>
+        <button class="email-btn" onclick="reportIssue('Sign Up Screen')">Report Issue</button>
+
+        <h3>2.2 OTP Verification</h3>
+        <ol>
+            <li>After successful sign-up, verify redirection to OTP verification screen</li>
+            <li>Check that OTP is received via email/SMS</li>
+            <li>Enter correct OTP and verify account creation</li>
+            <li>Test incorrect OTP entry</li>
+            <li>Verify "Resend Code" functionality (should be available after 60 seconds)</li>
+            <li>Test OTP expiration (if applicable)</li>
+        </ol>
+        <p class="result">Expected Result: OTP verification should work correctly, handling both correct and incorrect inputs.</p>
+        <button class="email-btn" onclick="reportIssue('OTP Verification')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>3. Login Process</h2>
+
+        <h3>3.1 Login Screen</h3>
+        <ol>
+            <li>Verify all elements are present (email field, password field, login button, forgot password link)</li>
+            <li>Test login with valid credentials</li>
+            <li>Test login with invalid email format</li>
+            <li>Test login with incorrect password</li>
+            <li>Verify error messages for invalid login attempts</li>
+            <li>Test "Remember Me" functionality if present</li>
+            <li>Verify "Forgot Password" link functionality</li>
+            <li>Test social login options if available</li>
+        </ol>
+        <p class="result">Expected Result: Login process should handle all scenarios correctly, displaying appropriate error messages and successfully logging in valid users.</p>
+        <button class="email-btn" onclick="reportIssue('Login Screen')">Report Issue</button>
+
+        <h3>3.2 Forgot Password</h3>
+        <ol>
+            <li>Tap "Forgot Password" link</li>
+            <li>Enter email address and submit</li>
+            <li>Verify reset instructions are sent</li>
+            <li>Follow reset process and verify ability to set new password</li>
+            <li>Test login with new password</li>
+        </ol>
+        <p class="result">Expected Result: Password reset process should work smoothly, allowing users to set a new password and login with it.</p>
+        <button class="email-btn" onclick="reportIssue('Forgot Password')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>4. Home Screen</h2>
+
+        <h3>4.1 Home Screen Layout</h3>
+        <ol>
+            <li>Verify all components are present (header, search bar, course categories, featured courses)</li>
+            <li>Check that user information is correctly displayed</li>
+            <li>Verify that the search bar is functional</li>
+            <li>Test the course category horizontal scroll</li>
+            <li>Verify that featured courses are displayed correctly</li>
+        </ol>
+        <p class="result">Expected Result: Home screen should display all components correctly and be fully functional.</p>
+        <button class="email-btn" onclick="reportIssue('Home Screen Layout')">Report Issue</button>
+
+        <h3>4.2 Home Screen Functionality</h3>
+        <ol>
+            <li>Test pull-to-refresh functionality</li>
+            <li>Tap on a course category and verify filtering</li>
+            <li>Tap on a featured course and verify navigation to course details</li>
+            <li>Test navigation to other main sections (e.g., profile, notifications)</li>
+        </ol>
+        <p class="result">Expected Result: All interactive elements on the home screen should work as intended, providing smooth navigation and content updates.</p>
+        <button class="email-btn" onclick="reportIssue('Home Screen Functionality')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>5. Course Details</h2>
+
+        <h3>5.1 Course Information Display</h3>
+        <ol>
+            <li>Navigate to a specific course's detail screen</li>
+            <li>Verify course title, thumbnail, price, and rating are displayed correctly</li>
+            <li>Check that "About" and "Lessons" tabs are present</li>
+            <li>Verify course description, prerequisites, and benefits are visible</li>
+        </ol>
+        <p class="result">Expected Result: Course details should be displayed accurately and completely.</p>
+        <button class="email-btn" onclick="reportIssue('Course Information Display')">Report Issue</button>
+
+        <h3>5.2 Course Interaction</h3>
+        <ol>
+            <li>Test switching between "About" and "Lessons" tabs</li>
+            <li>Verify that the course curriculum is displayed in the "Lessons" tab</li>
+            <li>Test the "Add to Cart" functionality</li>
+            <li>Verify that the button changes to "Go to Cart" after adding the course</li>
+        </ol>
+        <p class="result">Expected Result: All interactive elements on the course details page should function correctly.</p>
+        <button class="email-btn" onclick="reportIssue('Course Interaction')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>6. Search Functionality</h2>
+
+        <h3>6.1 Search Process</h3>
+        <ol>
+            <li>Navigate to the search screen</li>
+            <li>Enter various search terms (course names, topics, etc.)</li>
+            <li>Verify that search results appear</li>
+            <li>Test search with partial terms and misspellings</li>
+        </ol>
+        <p class="result">Expected Result: Search function should return relevant results for various inputs.</p>
+        <button class="email-btn" onclick="reportIssue('Search Process')">Report Issue</button>
+
+        <h3>6.2 Search Filters</h3>
+        <ol>
+            <li>Test category filters</li>
+            <li>Apply multiple filters and verify results</li>
+            <li>Clear filters and verify all results are shown</li>
+        </ol>
+        <p class="result">Expected Result: Filters should correctly narrow down search results.</p>
+        <button class="email-btn" onclick="reportIssue('Search Filters')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>7. Cart and Checkout</h2>
+
+        <h3>7.1 Cart Management</h3>
+        <ol>
+            <li>Add multiple courses to cart</li>
+            <li>Navigate to cart screen</li>
+            <li>Verify all added courses are visible</li>
+            <li>Remove a course from cart</li>
+            <li>Verify total price updates correctly</li>
+        </ol>
+        <p class="result">Expected Result: Cart should accurately reflect added and removed items, with correct price calculations.</p>
+        <button class="email-btn" onclick="reportIssue('Cart Management')">Report Issue</button>
+
+        <h3>7.2 Checkout Process</h3>
+        <ol>
+            <li>Proceed to checkout</li>
+            <li>Verify payment options are displayed</li>
+            <li>Test each payment method (if possible in test environment)</li>
+            <li>Complete a purchase</li>
+            <li>Verify order confirmation and receipt</li>
+        </ol>
+        <p class="result">Expected Result: Checkout process should be smooth, with successful payment processing and order confirmation.</p>
+        <button class="email-btn" onclick="reportIssue('Checkout Process')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>8. User Profile</h2>
+
+        <h3>8.1 Profile Information</h3>
+        <ol>
+            <li>Navigate to profile screen</li>
+            <li>Verify user info displayed correctly (name, email, phone, location)</li>
+            <li>Test editing profile information</li>
+            <li>Update profile picture</li>
+        </ol>
+        <p class="result">Expected Result: User profile should display correct information and allow updates.</p>
+        <button class="email-btn" onclick="reportIssue('Profile Information')">Report Issue</button>
+
+        <h3>8.2 Profile Options</h3>
+        <ol>
+            <li>Test navigation to enrolled courses</li>
+            <li>Verify transaction history display</li>
+            <li>Check other profile options (settings, help, etc.)</li>
+        </ol>
+        <p class="result">Expected Result: All profile options should be accessible and functional.</p>
+        <button class="email-btn" onclick="reportIssue('Profile Options')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>9. Notifications</h2>
+
+        <ol>
+            <li>Navigate to notifications screen</li>
+            <li>Verify notifications are visible</li>
+            <li>Tap notification to mark as read</li>
+            <li>Clear read notifications</li>
+            <li>Verify real-time notification updates (if implemented)</li>
+        </ol>
+        <p class="result">Expected Result: Notifications should be displayed correctly, with proper read/unread status and clearing functionality.</p>
+        <button class="email-btn" onclick="reportIssue('Notifications')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>10. Course Access</h2>
+
+        <ol>
+            <li>Navigate to an enrolled course</li>
+            <li>Verify course content is accessible</li>
+            <li>Watch a video lesson</li>
+            <li>Test pause, resume, and seek functionality in video player</li>
+            <li>Submit a doubt or question</li>
+            <li>Test as a new user without purchased courses</li>
+        </ol>
+        <p class="result">Expected Result: Enrolled courses should be fully accessible, with functional video playback and interaction features.</p>
+        <button class="email-btn" onclick="reportIssue('Course Access')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>11. Logout</h2>
+
+        <ol>
+            <li>Locate and tap logout option</li>
+            <li>Confirm logout action</li>
+            <li>Verify redirection to login screen</li>
+            <li>Attempt to access protected content after logout</li>
+        </ol>
+        <p class="result">Expected Result: Logout should successfully end the user session and prevent access to protected content.</p>
+        <button class="email-btn" onclick="reportIssue('Logout')">Report Issue</button>
+    </div>
+
+    <div class="section">
+        <h2>12. Error Handling
